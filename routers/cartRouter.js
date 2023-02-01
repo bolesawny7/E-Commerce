@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+exports.cartRouter = void 0;
+var express_1 = require("express");
+var cartController_1 = require("../controllers/cartController");
+var cartController_2 = require("../controllers/cartController");
+var cartController_3 = require("../controllers/cartController");
+exports.cartRouter = (0, express_1.Router)();
+exports.cartRouter.get('/users/:userId/cart', cartController_2.getAllCarts);
+exports.cartRouter.post('/users/:userId/carts/:productId', cartController_1.addProductToCart);
+exports.cartRouter["delete"]('/users/:userId/carts/:productId', cartController_3.deleteProductFromCart);
